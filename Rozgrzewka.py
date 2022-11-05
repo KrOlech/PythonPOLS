@@ -7,7 +7,7 @@ def podpunktA(wykladnik=2):
 def podpunktB():
     # Funkcja pobierająca impute od użytkownika i wypisująca od 1 do 199 protege dla tego wykładnika
 
-    try:  # rozpoczęcie initialization wyłapania potencjalnego biednego impute
+    try:  # rozpoczęcie initialization wyłapania potencjalnego blendnego impute
 
         # odczyt impute
         wykladnik = input("Podaj wykładnik (int): ")
@@ -25,6 +25,25 @@ def podpunktB():
 
         # wywołanie skryptu wypisującego potęgi
         podpunktA(wykladnik)
+
+    except ValueError:
+        # obsłużenie potencjalnego biednego impute
+        print("Program obsługuje tylko i wyłącznie dodatnie całkowite wykładniki")
+
+def alternatywnyPodpunktA(mianownik=1.0):
+    if mianownik!=0:
+        for i in range(1, 200):  # pętla od 1 do 199
+            print(i/ mianownik)
+
+def alternatywnyPodpunktB():
+    try:  # rozpoczęcie initialization wyłapania potencjalnego blendnego impute
+
+        # odczyt impute
+        mianownik = input("Podaj wykładnik (int): ")
+
+
+        # wywołanie skryptu wypisującego potęgi
+        alternatywnyPodpunktA(float(mianownik))
 
     except ValueError:
         # obsłużenie potencjalnego biednego impute
